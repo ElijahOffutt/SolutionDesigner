@@ -30,6 +30,8 @@
 
 <script setup>
 
+import { useLocalStorage } from '@vueuse/core';
+
 // IMPORT CONFIG STATE
 import { useConfigState } from './ConfigState';
 
@@ -43,17 +45,17 @@ let { progress } = storeToRefs(ConfigState)
 import Step from './Step.vue';
 
 // IMPORT WALK THROUGH COMPONENTS
-import Welcome from './Welcome.vue';
+import Start from './Start.vue';
 
 let items = shallowRef([
     {
         meta: {
-            value: 'welcome',
+            value: 'start',
             text: 'Getting Started',
             icon: 'flag-checkered',
             complete: false
         },
-        item: Welcome,
+        item: Start,
     },
     {
         meta: {
@@ -62,7 +64,7 @@ let items = shallowRef([
             icon: 'robot',
             complete: false
         },
-        item: Welcome,
+        item: null,
     }
 ])
 
@@ -82,8 +84,6 @@ let prev = (step) => {
 
     if (currentIndex.value != 0) { progress.value = items.value[currentIndex.value - 1].meta.value }
 
-
 }
-
 
 </script>

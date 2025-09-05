@@ -17,7 +17,7 @@ declare module 'vue' {
     Item: typeof import('./components/wizards/Config/Base/item.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Start: typeof import('./components/wizards/Config/Start.vue')['default']
     Step: typeof import('./components/wizards/Config/Step.vue')['default']
-    Welcome: typeof import('./components/wizards/Config/Welcome.vue')['default']
   }
 }

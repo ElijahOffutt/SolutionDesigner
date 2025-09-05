@@ -6,7 +6,7 @@ import { useLocalStorage } from "@vueuse/core";
 export const useConfigState = defineStore('ConfigState', () => {
 
     // DEFAULT STARTING VALUE FOR CONFIG WIZARD
-    let progress = useLocalStorage('ConfigProgress', 'welcome')
+    let progress = useLocalStorage('ConfigProgress', 'start')
 
     return {
         // REFS => STATE
